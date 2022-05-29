@@ -69,22 +69,13 @@ void motor_Setup()
 void logic_Motor()
 {
     // storing value from photoPin inside a variable
-    int value = analogRead(photoPin);
-    // if checks if the time is greater or equal to 17 or 5pm in 12 hour format.
-    if (timeInfo.tm_hour >= 17)
+    int lightLevels = analogRead(photoPin);
+    // if checks if the time is greater or equal to 17 or 5pm in 12 hour format and checks for the lightlevels of the photo sensor
+    if (timeInfo.tm_hour >= 17 && lightLevels >= 2000)
     {
-        // proceeds to check if the photoPin value is greater or equal to 2000 and proceeds to call function.
-        if (value >= 2000)
-        {
-            move_Motor_Clockwise();
-        }
-        // else comes in effect if the condition is not met that we set inside the if block.
-        else
-        {
-            move_Motor_CounterClockwise();
-        }
+        move_Motor_Clockwise();
     }
-    // Else comes in effect if the time is not greater or equal to 17 which means 5 pm in 12 hour format.
+    // Else comes in effect if the time is not greater or equal to 17 which means 5 pm in 12 hour format and the lightlevels are less than 2000
     else
     {
         move_Motor_CounterClockwise();
