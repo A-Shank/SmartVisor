@@ -1,4 +1,4 @@
-//basic includes
+// basic includes
 #include <Arduino.h>
 #include "wifiDefinition.h"
 #include "wifiVariables.h"
@@ -13,7 +13,7 @@ void setup()
   // calling init time function and passing server as paramter
   init_Time(ntpServer);
   // calling motor init function
-  motor_Init();
+  motor_Setup();
 }
 
 void loop()
