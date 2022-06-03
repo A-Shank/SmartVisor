@@ -1,4 +1,4 @@
-// basic includes
+// Includes the Arduino.h files as well as all our other headerfiles that are needed.
 #include <Arduino.h>
 #include "wifiDefinition.h"
 #include "wifiVariables.h"

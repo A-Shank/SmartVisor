@@ -1,6 +1,5 @@
 #include <Arduino.h>
 #include "time_Driver.h"
-#include "timeStruct.h"
 
 // creating a accelstepper object. Passing the Driver, stepPin and dirPin as parameter.
 // IMPORTANT: You can define a motorInterfaceType and use enums or just use ints. It is not recommended to do so! Pass the Driver value or others like demonstrated here.
