@@ -60,12 +60,12 @@ ___  ___      _              ______                _   _
 void move_Motor_Clockwise()
 {
     // loop runs as long as the position of motor is not equal to 400 steps
-    while (stepper.currentPosition() != 400)
+    while (stepper.currentPosition() != 100)
     {
         // IMPORTANT: DO NOT move setSpeed into the motor_Setup function. This will create an infinite loop.
 
         // setting the speed to 400.
-        stepper.setSpeed(400);
+        stepper.setSpeed(250);
         // makes motor run based on speed.
         stepper.runSpeed();
     }
@@ -77,7 +77,7 @@ void move_Motor_CounterClockwise()
     while (stepper.currentPosition() != 0)
     {
         // sets the speed to -400 this indicates to move counter clock wise.
-        stepper.setSpeed(-400);
+        stepper.setSpeed(-250);
         // runs the motor
         stepper.runSpeed();
     }
@@ -103,10 +103,6 @@ void logic_Motor()
         {
             move_Motor_Clockwise();
         }
-    }
-    else if (lightLevels >= 2000)
-    {
-        move_Motor_Clockwise();
     }
     else
     {
