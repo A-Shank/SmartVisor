@@ -22,7 +22,7 @@ void loop()
 {
 
   // Uncomment if you would like to have the time printed to see what is going on!
-  print_Time();
+  //print_Time();
   compass_Whatever();
   // calling the logic motor function
   logic_Motor();
